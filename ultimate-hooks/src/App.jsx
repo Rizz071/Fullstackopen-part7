@@ -18,7 +18,6 @@ const useField = (type) => {
 const useResource = (baseUrl) => {
   const [resources, setResources] = useState([])
 
-
   axios
     .get(baseUrl)
     .then(fetchedData => {
@@ -30,6 +29,7 @@ const useResource = (baseUrl) => {
 
 
   const create = (resource) => {
+
     axios
       .post(baseUrl, resource)
       .catch((error) => {
